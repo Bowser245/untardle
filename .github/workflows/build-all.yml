@@ -24,11 +24,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install PyQt5 pyinstaller
 
-    - name: Compiler avec PyInstaller (.app unique)
+    - name: Compiler avec PyInstaller (.app standard)
       run: |
-        pyinstaller --onefile --windowed --name="Untardle" main.py
+        pyinstaller --windowed --name="Untardle" main.py
 
-    - name: Telecharger le package Mac
+    - name: Telecharger le package Mac (GitHub va le zipper automatiquement)
       uses: actions/upload-artifact@v4
       with:
         name: Untardle-Mac-App
@@ -51,7 +51,7 @@ jobs:
         python3 -m pip install --upgrade pip
         pip3 install PyQt5 pyinstaller
 
-    - name: Compiler avec PyInstaller (Binaire Linux unique)
+    - name: Compiler avec PyInstaller (Binaire Linux)
       run: |
         pyinstaller --onefile --windowed --name="untardle" main.py
 
