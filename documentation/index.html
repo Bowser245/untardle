@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Untardle</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f7f6; }
+        header { background: #2c3e50; color: #fff; padding: 20px; text-align: center; }
+        nav { display: flex; justify-content: center; background: #34495e; }
+        nav a { color: white; padding: 14px 20px; text-decoration: none; }
+        nav a:hover { background: #1abc9c; }
+        .container { max-width: 800px; margin: 30px auto; padding: 20px; background: #fff; border-radius: 8px; }
+        pre { background: #272822; color: #f8f8f2; padding: 15px; border-radius: 4px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Documentation Untardle</h1>
+        <p>Comprendre le fonctionnement du format .unt</p>
+    </header>
+
+    <nav>
+        <a href="bowser245.github.io/untardle">Accueil</a>
+        <a href="bowser245.github.io/untardle/documentation">Documentation</a>
+        <a href="bowser245.github.io/untardle/download/">Download</a>
+    </nav>
+
+    <div class="container">
+        <h2>Spécification du Format</h2>
+        <p>Chaque archive générée possède l'extension <code>.unt</code> et respecte la structure textuelle suivante :</p>
+        
+        <pre><code>!/.unt!\
+/Dossier/fichier1.exe : &lt;/file-start/&gt;
+[Données brutes encodées en Base64]
+&lt;/file-end/&gt;
+/fichier.txt : &lt;/file-start/&gt;
+[Données brutes encodées en Base64]
+&lt;/file-end/&gt;</code></pre>
+
+        <h2>Comment ça marche ?</h2>
+        <p>L'application parcourt vos répertoires et convertit chaque élément en morceaux de texte sécurisés. Lors de l'extraction, l'application recrée automatiquement l'arborescence des dossiers d'origine sans perte de données.</p>
+    </div>
+
+</body>
+</html>
